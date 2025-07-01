@@ -3,9 +3,8 @@ import { useState } from "react";
 import withLayoutBasic from '@/libs/components/layout/LayoutBasic';
 
 
-
 const Community:NextPage =()=>{
-    console.log("Community Component -Pages Router ");
+    console.log("Community Component - Pages Router ");
     const [title,setTitle] = useState<string>("hello");
     return(
         <div>
@@ -16,5 +15,4 @@ const Community:NextPage =()=>{
         </div>
     );
 };
-
 export default  withLayoutBasic(Community);

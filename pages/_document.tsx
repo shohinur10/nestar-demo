@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+
+export default function Document(){
   return (
     <Html lang="en">
       <Head>
@@ -10,10 +11,9 @@ export default function Document() {
       <link rel="icon"type ="image/png" href="/img/logo/favicon.svg"/>
 
       {/*SEO*/}
-
       <meta
        name="keyword"
-       content={"Nestar Demo, Nestar, Demo, Nestar Demo, Nestar Demoo"}
+       content={"nestar ,nestar.uz, devex mern, mern nestjs fullsatck"}
        />
        <meta
        name="description"
