@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Add other options here if needed
+  // add other config options here
 };
 
 module.exports = nextConfig;

@@ -8,7 +8,7 @@ const Footer=() =>{
             <Stack className={"main"}>
                 <Stack className={"left"}>
                     <Box component={"div"} className={"footer-box"}>
-                        <img src="/public/img/logo/logoWhite.svg" alt="" className={"logo"}/>  
+                        <img src="/img/logo/logoWhite.svg" alt="" className={"logo"}/>  
                     </Box>
                     <Box component={"div"} className={"footer-box"}>
                         <span> total free customer care</span>
@@ -21,12 +21,12 @@ const Footer=() =>{
                     </Box>
                     <Box component={"div"} className={"footer-box"}>
                         <p>follow us on social media </p>
-                        <div className={"media-box"}>
+                        {/* <div className={"media-box"}>
 								<FacebookOutlinedIcon />
 								<TelegramIcon />
 								<InstagramIcon />
 								<TwitterIcon />
-							</div>
+							</div> */}
                     </Box>
                 </Stack>
                 <Stack className={"right"}>

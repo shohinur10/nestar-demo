@@ -1,41 +1,38 @@
-import { Stack } from "@mui/material"
+import { Stack } from "@mui/material";
 import Head from "next/head";
 import Footer from "../Footer";
 import Top from "../Top";
 import HeaderFilter from "@/libs/homepage/HeaderFilter";
 
-
-const withLayoutMain=(Component:any) =>{
-    return (props:any) =>{
-        return (
-        <>
+const withLayoutMain = (Component: any) => {
+  return (props: any) => {
+    return (
+      <>
         <Head>
-            <title>
-                Nestar
-            </title>
+          <title>Nestar</title>
         </Head>
         <Stack id="pc-wrap">
-        <Stack id={"top"}>
-            <Top/>
-        </Stack>
-              <Stack className={"header-main"} >
-                <Stack className={"container"}>
-                    <HeaderFilter/>
-                </Stack>
-              </Stack>
-              <Stack id={"main"}>
-                <Component {...props} />
-              </Stack>
-             
-        <Stack id={"top"}>
-            <Footer/>
-        </Stack>
-        </Stack>
-        
-        </>
-        );
-    };
-};
+          <Stack id="top">
+            <Top />
+          </Stack>
 
+          <Stack className="header-main">
+            <Stack className="container">
+              <HeaderFilter />
+            </Stack>
+          </Stack>
+
+          <Stack id="main">
+            <Component {...props} />
+          </Stack>
+
+          <Stack id="footer">
+            <Footer />
+          </Stack>
+        </Stack>
+      </>
+    );
+  };
+};
 
 export default withLayoutMain;

@@ -5,16 +5,14 @@
 
 /**Version: PC **/
 
-
-
-#pc-warp{
+#pc-wrap{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     .container{
         position: relative;
         width: 1300px;
         margin:0 auto;
         display: flex;
-        background-color: rgb(41, 108, 108);
+       
     }
 }
