@@ -1,4 +1,11 @@
 import { Box, Stack } from "@mui/material"
+import FacebookOutLinedIcon from '@mui/icons-material/FacebookOutlined';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import React from "react";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 
@@ -21,12 +28,14 @@ const Footer=() =>{
                     </Box>
                     <Box component={"div"} className={"footer-box"}>
                         <p>follow us on social media </p>
-                        {/* <div className={"media-box"}>
-								<FacebookOutlinedIcon />
-								<TelegramIcon />
-								<InstagramIcon />
-								<TwitterIcon />
-							</div> */}
+                        <div className={"media-box"}>
+                           <FacebookOutLinedIcon/>
+                           <TelegramIcon/>
+                           <InstagramIcon/>
+                           <TwitterIcon/>
+                           <LinkedInIcon/>
+                           <WhatsAppIcon/>
+                        </div>
                     </Box>
                 </Stack>
                 <Stack className={"right"}>
@@ -37,7 +46,8 @@ const Footer=() =>{
                             <span>Subscribe</span>
 
                         </div>
-                        <Box component={"div"} className={"bottom"}>
+                    </Box>
+                        < Box component={"div"} className={"bottom"}>
                         <div>
 								<strong>Popular Search</strong>
 								<span>Property for Rent</span>
@@ -59,13 +69,13 @@ const Footer=() =>{
 								<span>Busan</span>
 								<span>Jejudo</span>
 							</div>
-                        </Box>
                     </Box>
                 </Stack>
+            </Stack>
                 <Stack className={"second"}>
                     <span>Nestar - All rights reserved.Nestar2024</span>
                     <span>Privacy . Terms . Sitemap</span>
-                </Stack>
+            
             </Stack>
         </Stack>
     );
