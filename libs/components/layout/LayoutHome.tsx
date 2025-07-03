@@ -3,6 +3,11 @@ import Head from "next/head";
 import Footer from "../Footer";
 import Top from "../Top";
 import HeaderFilter from "@/libs/homepage/HeaderFilter";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 
 const withLayoutMain = (Component: any) => {
   return (props: any) => {
@@ -12,21 +17,21 @@ const withLayoutMain = (Component: any) => {
           <title>Nestar</title>
         </Head>
         <Stack id="pc-wrap">
-          <Stack id="top">
+          <Stack id={"top"}>
             <Top />
           </Stack>
 
-          <Stack className="header-main">
-            <Stack className="container">
+          <Stack className={"header-main"}>
+            <Stack className={"container"}>
               <HeaderFilter />
             </Stack>
           </Stack>
 
-          <Stack id="main">
+          <Stack id={"main"}>
             <Component {...props} />
           </Stack>
 
-          <Stack id="footer">
+          <Stack id={"footer"}>
             <Footer />
           </Stack>
         </Stack>

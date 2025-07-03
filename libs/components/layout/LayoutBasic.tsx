@@ -4,7 +4,7 @@ import Top from "../Top";
 import Footer from "../Footer";
 
 const withLayoutBasic = (Component: any) => {
-  const Layout = (props: any) => {
+  return (props: any) => {
     return (
       <>
         <Head>
@@ -41,8 +41,6 @@ const withLayoutBasic = (Component: any) => {
       </>
     );
   };
-
-  return Layout; // ✅ this is correct
 };
 
 export default withLayoutBasic;
