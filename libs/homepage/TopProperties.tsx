@@ -5,7 +5,8 @@ import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TopPropertyCard from "./TopPropertyCard";
 
-const TopProperties = ({ initialInput, ...props }: any) => {
+const TopProperties = ({ initialInput, ...props }: any) => {// ... bu spread operator
+    
   const [topProperties, setTopProperties] = useState<number[]>(initialInput);
 
   return (
