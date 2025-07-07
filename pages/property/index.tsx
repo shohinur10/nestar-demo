@@ -4,7 +4,7 @@ import { Box, Button, Pagination, Stack, Typography } from "@mui/material";
 import { NextPage } from "next";
 import { useState } from "react";
 import KeyboardAltRoundedIcon from "@mui/icons-material/KeyboardAltRounded";
-import PropertyCard from "@/libs/components/property/Filter";
+import PropertyCard from "@/libs/components/property/PropertyCard";
 import Filter from "@/libs/components/property/Filter";
 
 const PropertyList: NextPage = () => {
