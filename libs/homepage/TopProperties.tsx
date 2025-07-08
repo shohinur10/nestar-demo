@@ -4,9 +4,7 @@ import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TopPropertyCard from "./TopPropertyCard";
-
-const TopProperties = ({ initialInput, ...props }: any) => {// ... bu spread operator
-    
+const TopProperties = ({ initialInput = [1, 2, 3, 4, 5, 6, 7], ...props }: any) => {
   const [topProperties, setTopProperties] = useState<number[]>(initialInput);
 
   return (
@@ -38,13 +36,11 @@ const TopProperties = ({ initialInput, ...props }: any) => {// ... bu spread ope
               el: ".swiper-top-pagination",
             }}
           >
-            {topProperties.map((property, index) => {
-              return (
-                <SwiperSlide className={"top-property-slide"} key={index}>
-                  <TopPropertyCard />
-                </SwiperSlide>
-              );
-            })}
+            {topProperties.map((property, index) => (
+              <SwiperSlide className={"top-property-slide"} key={index}>
+                <TopPropertyCard />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Stack>
       </Stack>
@@ -52,8 +48,6 @@ const TopProperties = ({ initialInput, ...props }: any) => {// ... bu spread ope
   );
 };
 
-TopProperties.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 7],
-};
+// Removed TopProperties.defaultProps
 
 export default TopProperties;
