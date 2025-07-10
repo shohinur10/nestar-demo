@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 
-const useDeviceDetect = (): string => {
-  const [device, setDevice] = useState<string>("desktop");
+const useDeviceDetect = (): "mobile" | "desktop" => {
+  const [device, setDevice] = useState<"mobile" | "desktop">("desktop");
 
   useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const isMobile =
-      /Android|webOS|iPone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        userAgent
-      );
+    if (typeof navigator === "undefined") return;
+
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+
+    const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+      userAgent.toLowerCase()
+    );
+
     setDevice(isMobile ? "mobile" : "desktop");
-  }, [device]);
+  }, []); // ✅ Run only once after mount
+
   return device;
 };
 

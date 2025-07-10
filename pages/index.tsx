@@ -15,8 +15,7 @@ import { GET_PROPERTIES } from "@/apollo/user/query";
 
 const Home: NextPage = () => {
     const device = useDeviceDetect();
-     
-
+    console.log("device => ", device);
     const {
       loading: getPropertiesLoading,
       data: getPropertiesData,
@@ -37,7 +36,7 @@ const Home: NextPage = () => {
     });
         console.log( "getPropertiesData => ", getPropertiesData);
       
-    if(device == "mobile"){
+    if(device === "mobile"){
       return <Stack>HOMEPAGE MOBILE</Stack>
     }else{
       return (
